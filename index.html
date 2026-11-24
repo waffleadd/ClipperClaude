@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ClipperClaude</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+/* VOICE: formal, plain legal memo
+   IDEA: a well-set policy document
+   PICTURE: none; the text and a clear summary table carry it
+   COLOUR and TYPE: black on white, one quiet accent; Inter
+   LAYOUT: single 720px column, section links at top */
+:root{color-scheme:light dark;--bg:light-dark(#ffffff,#121417);--ink:light-dark(#16181b,#e9ebee);--mute:light-dark(#5b6168,#9aa1a9);--line:light-dark(#e3e6e9,#2a2e33);--acc:light-dark(#b4482a,#f08a6c)}
+:root[data-theme=light]{color-scheme:light}:root[data-theme=dark]{color-scheme:dark}
+*{box-sizing:border-box;min-width:0}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.6 Inter,system-ui,sans-serif;overflow-x:clip}
+main{max-width:760px;margin:0 auto;padding:clamp(28px,5vw,64px) max(5vw,18px) 80px}
+h1{font-size:clamp(32px,5vw,44px);line-height:1.08;margin:0 0 10px;text-wrap:balance}
+h2{font-size:28px;line-height:1.15;margin:56px 0 6px;padding-top:12px;border-top:2px solid var(--ink)}
+h3{font-size:17px;margin:28px 0 6px}
+p,li{max-width:68ch}
+.meta{color:var(--mute);font-size:14px;margin:0}
+nav{display:flex;flex-wrap:wrap;gap:8px;margin:22px 0 0}
+nav a{display:inline-flex;align-items:center;min-height:44px;padding:0 16px;border:1px solid var(--line);border-radius:8px;color:var(--ink);text-decoration:none;font-weight:600}
+nav a:hover,nav a:focus-visible{border-color:var(--acc);outline:none}
+a{color:var(--acc)}
+table{width:100%;border-collapse:collapse;margin:14px 0;font-size:15px}
+th,td{text-align:left;vertical-align:top;padding:10px 12px 10px 0;border-bottom:1px solid var(--line)}
+th{font-size:14px;color:var(--mute);font-weight:600}
+.note{border-left:3px solid var(--acc);padding:4px 0 4px 14px;color:var(--mute)}
+html{scroll-padding-top:20px}
+@media(max-width:600px){table{font-size:13px}.stack thead{display:none}.stack tr{display:grid;padding-block:10px;border-bottom:1px solid var(--line)}.stack td{display:flow-root;border:0;padding:3px 0;padding-inline-start:8em;text-align:start}.stack td::before{content:attr(data-l);float:inline-start;width:7.5em;margin-inline-start:-8em;white-space:normal;color:var(--mute)}.stack td:empty{display:none}}
+</style>
+<script>new MutationObserver(()=>{for(const c of document.querySelectorAll('.stack td:not([data-l])')){let i=0,p=c;while(p=p.previousElementSibling)i+=p.colSpan;c.dataset.l=c.closest('table').rows[0].cells[i]?.textContent||''}}).observe(document,{childList:true,subtree:true})</script>
+</head>
+<body>
+<main>
+<h1>ClipperClaude</h1>
+<p class="meta">Effective date: November 24, 2026</p>
+<p>ClipperClaude is a personal desktop application for Windows. It turns long videos into short vertical clips and, when the user asks it to, uploads those clips to the user's own TikTok, Instagram and YouTube accounts through each platform's official API. It is not a web service: it runs only on the user's computer and has no servers of its own.</p>
+<nav aria-label="Sections"><a href="./">ClipperClaude</a><a href="privacy.html">Privacy Policy</a><a href="terms.html">Terms of Service</a></nav>
+
+<h2>How it works</h2>
+<ol>
+<li>You choose a long video from your computer.</li>
+<li>The app transcribes it locally and Claude suggests the best moments.</li>
+<li>It creates vertical 9:16 clips with subtitles and on-screen text.</li>
+<li>When you click Upload, it publishes them to your own TikTok, Instagram or YouTube account through the official APIs.</li>
+</ol>
+<p class="note">ClipperClaude is an independent tool and is not affiliated with or endorsed by TikTok, Meta, Google or Anthropic.</p>
+</main>
+</body>
+</html>
